@@ -1,0 +1,37 @@
+<?php $conn=mysqli_connect('localhost','root','','wonderpoint');
+       $db="SELECT * FROM `users'"
+     $records=mysql_query($db);
+       ?>
+
+
+<h2>List Users</h2>
+<table>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+<th>Gender</th>
+<th>Education</th>
+<th>Skills</th>
+
+
+</tr>
+<?php
+while($Userdata=mysql_fetch_assoc($records)){
+echo "<tr>";
+echo "<tr>".$Userdata[Fisrt_Name]."</tr>"
+echo "<tr>".$Userdata[Last_Name]."</tr>"
+echo "<tr>".$Userdata[Email]."</tr>"
+echo "<tr>".$Userdata[Gender]."</tr>"
+echo "<tr>".$Userdata[Education]."</tr>"
+echo "<tr>".$Userdata[Skills]."</tr>"
+echo "</tr>";
+}
+?>
+</table>
+</form>
+<?php $conn=mysqli_connect('localhost','root','','newuser');
+       $db="SELECT * FROM `users'"
+     $records=mysql_query($db);
+
+       ?>

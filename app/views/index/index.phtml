@@ -1,0 +1,54 @@
+<blockquote><h2>Add User</h2>
+
+<?php echo $this->tag->form('signUp/register') ?>
+
+	<p>
+		<label for="First_name">First Name:</label><br/>
+		<?php echo $this->tag->textField("First_name") ?>
+	</p>
+
+	<p>
+		<label for="Second_name">Last Name:</label><br/>
+		<?php echo $this->tag->textField("Second_name") ?>
+	</p>
+
+	<p>
+		<label for="email">E-Mail:</label><br/>
+		<?php echo $this->tag->textField("email") ?>
+	</p>
+
+	<p>
+		<label for="gender">Gender:</label><br/>
+<?php echo Phalcon\Tag::radioField([ "Gender", "value" => "Male"]);
+echo Phalcon\Tag::radioField([ "Gender", "value" => "Female"]);
+?>
+	</p>
+
+	
+
+	<p>
+	 <label for="Education">Education:</label><br/>
+<select selected="<?php echo $this->tag->textField("Education")?>">
+	<option value="B.E/B.tech">B.E/B.tech</option>
+	<option value="B.Sc">B.Sc</option>
+	<option value="M.E/M.tech">M.E/M.tech</option>
+</select>
+	</p>
+
+
+	<p>
+	   <label for="Skills">Skills:</label><br/>
+<?php
+echo Phalcon\Tag::textArea([ "Skills", "cols" => 10, "rows" => 4]);?>
+	</p>
+	
+
+	<p>
+		<?php echo $this->tag->submitButton("Register") ?>
+	</p>
+
+<br>
+<?php echo $this->tag->linkTo("ListUsers","All Users!"); ?>
+
+
+</form></blockquote>
